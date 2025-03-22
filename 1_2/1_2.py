@@ -20,16 +20,15 @@ else:
 
     #json 파일로 저장
     json_file = open('mission_computer_main.json', 'w',encoding='utf-8')
-    json_file.write('{\n')
+    json_file.write('{')
     for k,v in log_dict.items():
-        json_file.write(f'\t"{k}":{{"{header[0]}": "{v[header[0]]}", "{header[1]}": "{v[header[1]]}", "{header[2]}": "{v[header[2]]}"}},')
-        json_file.write('\n')
-    json_file.seek(json_file.tell()-3)
+        json_file.write(f'\n\t"{k}":{{"{header[0]}": "{v[header[0]]}", "{header[1]}": "{v[header[1]]}", "{header[2]}": "{v[header[2]]}"}},')
+    json_file.seek(json_file.tell()-1)
     json_file.write('\n}')
-    json_file.close()
+    json_file.close()   
 
     #특정 문자열 찾기
-    search = input("찾을 문자를 입력하세요 : ")
+    search = input('찾을 문자를 입력하세요 : ')
     for k,v in log_dict.items():
         if search in v[header[2]]:
-            print(v[header[0]],":",v[header[1]],":",v[header[2]])
+            print(v[header[0]],':',v[header[1]],':',v[header[2]])
