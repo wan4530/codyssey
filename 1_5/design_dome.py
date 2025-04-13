@@ -22,7 +22,7 @@ try:
     #평균값이 50보다 작은 값들을 뽑아 parts_to_work_on.csv 파일에 저장
     with open('1_5/parts_to_work_on.csv','w',encoding='utf-8') as work_file:
         for i in parts_avr:
-            if i[1]<=50:
+            if i[1]<50:
                 work_file.write('%s,%0.2f\n' %(i[0], i[1]))
     #parts_to_work_on.csv 를 읽어 parts2에 저장하고 출력하기
     with open('1_5/parts_to_work_on.csv','r',encoding='utf-8') as f:
