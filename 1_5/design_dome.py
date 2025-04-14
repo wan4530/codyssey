@@ -1,14 +1,14 @@
 try:
     import numpy
 
-    main_parts_1 = numpy.genfromtxt('1_5/mars_base_main_parts-001.csv', delimiter=',', dtype=None, encoding='utf-8', skip_header=1)
-    main_parts_2 = numpy.genfromtxt('1_5/mars_base_main_parts-002.csv', delimiter=',', dtype=None, encoding='utf-8', skip_header=1)
-    main_parts_3 = numpy.genfromtxt('1_5/mars_base_main_parts-003.csv', delimiter=',', dtype=None, encoding='utf-8', skip_header=1)
+    arr1 = numpy.genfromtxt('1_5/mars_base_main_parts-001.csv', delimiter=',', dtype=None, encoding='utf-8', skip_header=1)
+    arr2 = numpy.genfromtxt('1_5/mars_base_main_parts-002.csv', delimiter=',', dtype=None, encoding='utf-8', skip_header=1)
+    arr3 = numpy.genfromtxt('1_5/mars_base_main_parts-003.csv', delimiter=',', dtype=None, encoding='utf-8', skip_header=1)
     #3개의 ndarray들을 merge하기
-    parts = numpy.concatenate((main_parts_1,main_parts_2,main_parts_3))
+    parts = numpy.concatenate((arr1,arr2,arr3))
     #평균 구해서 parts_avr에 append하기
     parts_avr = []
-    for i in main_parts_1:
+    for i in arr1:
         name = i[0]
         values = [j[1] for j in parts if j[0] == name]
         avr = round(sum(values)/len(values),2)
