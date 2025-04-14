@@ -11,9 +11,8 @@ try:
     for i in main_parts_1:
         name = i[0]
         values = [j[1] for j in parts if j[0] == name]
-        if values:
-            avr = round(sum(values)/len(values),2)
-            parts_avr.append([str(name), avr])
+        avr = round(sum(values)/len(values),2)
+        parts_avr.append([str(name), float(avr)])
     #각 항목의 평균값 출력
     print('-'*15,'parts average','-'*15)
     for i in parts_avr:
