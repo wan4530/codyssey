@@ -19,11 +19,13 @@ class DummySensor:
         DummySensor.env_values['mars_base_external_illuminance'] = random.uniform(500, 715)
         DummySensor.env_values['mars_base_internal_co2'] = random.uniform(0.02,0.1)
         DummySensor.env_values['mars_base_internal_oxygen'] = random.uniform(4,7)
-#DummySensor 인스턴스 만들기
-ds = DummySensor()
-#값 설정하기
-ds.set_env()
-#값들을 가져오고 출력하기
-env = ds.get_env()
-for k,v in env.items():
-    print('%-30s : %9.5f' %(k,v))
+        
+if __name__ == "__main__":
+    #DummySensor 인스턴스 만들기
+    ds = DummySensor()
+    #값 설정하기
+    ds.set_env()
+    #값들을 가져오고 출력하기
+    env = ds.get_env()
+    for k,v in env.items():
+        print('%-30s : %9.5f' %(k,v))
