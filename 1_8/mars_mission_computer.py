@@ -69,9 +69,9 @@ class MissionComputer:
         items = list(system_info.items())
         for i, (k, v) in enumerate(items):
                 if(i < len(items)-1):
-                    print(f"    \"{k}\" : {v},")
+                    print(f"    \"{k}\" : \"{v}\",")
                 else:
-                    print(f"    \"{k}\" : {v}")
+                    print(f"    \"{k}\" : \"{v}\"")
         print("}")
 
     def get_mission_computer_load(self):
@@ -83,9 +83,9 @@ class MissionComputer:
         items = list(load_info.items())
         for i, (k, v) in enumerate(items):
                 if(i < len(items)-1):
-                    print(f"    \"{k}\" : {v},")
+                    print(f"    \"{k}\" : \"{v}\",")
                 else:
-                    print(f"    \"{k}\" : {v}")
+                    print(f"    \"{k}\" : \"{v}\"")
         print("}")
 
 # MissionComputer 인스턴스 생성
