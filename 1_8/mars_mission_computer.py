@@ -1,7 +1,7 @@
 import random
-import platform  # 운영체제 정보를 가져오기 위한 모듈
-import os  # CPU 코어 수를 가져오기 위한 모듈
-import psutil  # 메모리, CPU 사용량을 가져오기 위한 모듈
+import platform 
+import os  
+import psutil
 
 class DummySensor:
     env_values = {
