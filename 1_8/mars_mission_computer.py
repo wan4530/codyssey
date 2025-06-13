@@ -61,7 +61,7 @@ class MissionComputer:
             'operating_system': platform.system(),  # 운영체계
             'os_version': platform.version(),  # 운영체계 버전
             'cpu_type': platform.processor(),  # CPU 타입
-            'cpu_core_count': os.cpu_count(),  # CPU 코어 수
+            'cpu_core': os.cpu_count(),  # CPU 코어 수
             'memory_size': f"{round(psutil.virtual_memory().total / (1024 ** 3), 2)} GB"  # 메모리 크기
         }
         # JSON 형식으로 출력
