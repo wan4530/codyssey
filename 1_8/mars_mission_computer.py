@@ -57,7 +57,6 @@ class MissionComputer:
                     print(f"    \"{k}\" : {v},")
         print("}")
     def get_mission_computer_info(self):
-        # 시스템 정보 가져오기기
         system_info = {
             'operating_system': platform.system(),  # 운영체계
             'os_version': platform.version(),  # 운영체계 버전
@@ -76,7 +75,6 @@ class MissionComputer:
         print("}")
 
     def get_mission_computer_load(self):
-        # 시스템 부하 정보 가져오기
         load_info = {
             'cpu_usage_percent': psutil.cpu_percent(interval=1),  # CPU 사용량
             'memory_usage_percent': psutil.virtual_memory().percent  # 메모리 사용량
