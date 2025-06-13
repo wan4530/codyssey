@@ -76,8 +76,8 @@ class MissionComputer:
 
     def get_mission_computer_load(self):
         load_info = {
-            'cpu_usage_percent': psutil.cpu_percent(interval=1),  # CPU 사용량
-            'memory_usage_percent': psutil.virtual_memory().percent  # 메모리 사용량
+            'cpu_usage': psutil.cpu_percent(interval=1),  # CPU 사용량
+            'memory_usage': psutil.virtual_memory().percent  # 메모리 사용량
         }
         # JSON 형식으로 출력
         items = list(load_info.items())
